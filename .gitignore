@@ -1,0 +1,5 @@
+#ignore folders
+bootstrap_sass/node_modules
+
+#ignore files
+bootstrap_sass/package-lock.json

@@ -1,0 +1,153 @@
+<div id="page-wrapper">
+   <!-- The video -->
+   <video autoplay muted loop id="myVideo">
+      <source src="{{url('<front>')}}themes/contrib/bootstrap_sass/video/golden-trees.mp4" type="video/mp4">
+    </video> 
+  <div id="page landing-page">
+   
+{# HEADER #}
+    {% include '@bootstrap_sass/includes/header.html.twig' %}
+{# HIGHLIGHTED #}
+    {% include '@bootstrap_sass/includes/highlighted.html.twig' %}
+{# FEATURED-TOP #}
+    {% include '@bootstrap_sass/includes/featured-top.html.twig' %}
+
+
+{# MAIN #}      
+    <div class="container-fluid">
+      <div class="row">
+        <div class="front-page">
+         
+          <div class="items">
+            
+            <ul id="time" class="time"></ul>
+              
+            <h1><span id="greetings" class="greetings">Hi!</span></h1>
+
+            
+           
+            <div id="progress-bar">
+                  <ul class="medi-time">
+                    <li><button id="timeslot" dataTime="2">2</button></li>
+                    <li><button id="timeslot" dataTime="5">5</button></li>
+                    <li><button id="timeslot" dataTime="15">15</button></li>
+                    <li><button id="timeslot" dataTime="30">30</button></li>
+                    <li><button id="timeslot" dataTime="60">60</button></li>
+                  </ul>
+                  <div>Please choose time slot for meditation</div>
+            </div>
+            <div class="buddha-bachana">
+              <h3>Dhammapada</h3>
+              <p id="dhammapada"></p>
+            </div> 
+          </div>
+
+          {# TODO LIST #}
+          <div class="todo-block">
+            <div class="header">
+                  <div class="clear"><i class="fas fa-sync-alt"></i></div>    
+                  <div id="date" class="date"></div>
+                  <div><i class="fas fa-angle-down"></i></div>   
+            </div>
+            <div class="container">    
+                <div class="content">
+                  <ul id="list">
+                    <!-- <li class="item">
+                      <i class="far fa-circle"></i>
+                      <i class="text">drink tea</i>
+                      <i class="far fa-trash-alt" job="delete"></i>
+                    </li> -->
+                  </ul>
+                </div>
+            </div>
+            <div class="add-to-do">
+                <i class="fa fa-plus-circle"></i>
+                <input type="text" id="input" placeholder="add to do" >
+            </div>
+          </div>
+          
+        </div>        
+      </div>
+    </div>
+
+
+
+
+
+
+{# FEATURED-BOTTOM #}
+    {% include '@bootstrap_sass/includes/featured-bottom.html.twig' %}
+{# FOOTER #}  
+    {% include '@bootstrap_sass/includes/footer.html.twig' %}
+  </div>
+</div>
+
+
+<script>
+
+let windowInnerWith = window.innerWidth;
+console.log(windowInnerWith);
+document.getElementById('myVideo').style.width = windowInnerWith;
+
+    function fancyTimeFormat(time)
+    {   
+        // Hours, minutes and seconds
+        var hrs = ~~(time / 3600);
+        var mins = ~~((time % 3600) / 60);
+        var secs = ~~time % 60;
+    
+        // Output like "1:01" or "4:03:59" or "123:03:59"
+        var ret = "";
+    
+        if (hrs > 0) {
+            ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+        }
+    
+        ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+        ret += "" + secs;
+        return ret;
+    }  
+
+
+function countDown(e){
+ 
+  let button = e.target.attributes.id.value;
+  let dataTime = e.target.attributes.dataTime.value * 60;
+  //console.log('target value ',e.target.attributes.dataTime.value);
+  var timeleft = dataTime;
+  var bell_start = new Audio("{{url('<front>')}}themes/contrib/bootstrap_sass/sound/bell_start.mp3");
+  var bell_end = new Audio("{{url('<front>')}}themes/contrib/bootstrap_sass/sound/bell_end.mp3");
+
+
+
+    
+      var downloadTimer = setInterval(function(){
+        
+        document.getElementById("progress-bar").innerHTML = 
+        `
+        <div id="timeLeft"></div>
+        <div><a href="" class="stop"><i class="far fa-stop-circle"></i></a></div>
+        `;
+        
+        timeleft === 5 ? bell_end.play() : console.log('do nothing');
+        document.getElementById("progress-bar").value = dataTime - timeleft;
+        document.getElementById("timeLeft").innerHTML = fancyTimeFormat(timeleft);
+        timeleft -= 1;
+        if(timeleft < 0)
+          clearInterval(downloadTimer);
+      }, 1000);
+      bell_start.play();
+}
+
+
+window.addEventListener('click', countDown);
+
+
+/** footer style for front page only*/
+const footer = document.querySelector("footer");
+footer.style.position = 'absolute';
+footer.style.bottom = '0px';
+footer.style.width = '100%';
+
+</script>
+
