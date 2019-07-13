@@ -27,9 +27,14 @@ let db_suttas = localStorage.getItem('Suttas')
                 ? JSON.parse(localStorage.getItem('Suttas')) 
                 : null;
 
+
+
 /** 
 * REQUEST DAILY MOTIVATION SUTTAS FROM THE D8 DATABASE */
-const suturl = 'http://localhost:8888/Drupal/d8lite-meditation-app/web/jsonapi/node/motivation_suttas';
+const rootUrl = window.location.href;
+const suturl = `${rootUrl}/jsonapi/node/motivation_suttas`;
+
+
 
  var xhttp = new XMLHttpRequest();
  xhttp.onreadystatechange = function() {
