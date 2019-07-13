@@ -27,8 +27,6 @@ let db_suttas = localStorage.getItem('Suttas')
                 ? JSON.parse(localStorage.getItem('Suttas')) 
                 : null;
 
-
-
 /** 
 * REQUEST DAILY MOTIVATION SUTTAS FROM THE D8 DATABASE */
 const rootUrl = window.location.href;

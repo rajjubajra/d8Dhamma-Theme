@@ -9,7 +9,7 @@
  ? JSON.parse(localStorage.getItem('Dhammapada'))
  : null;
 
-const dhmurl = "http://localhost:8888/Drupal/d8lite-meditation-app/web/jsonapi/node/dhammapada_quotes";
+const dhmurl = `${rootUrl}/jsonapi/node/dhammapada_quotes`;
 
 var dhmxhttp = new XMLHttpRequest();
 dhmxhttp.onreadystatechange = function() {
