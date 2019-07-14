@@ -5,15 +5,18 @@
           <div class="site-footer__top clearfix">
             {{ page.footer_first }}
             {{ page.footer_second }}
+             <div class="site-footer__bottom"></div>
             {{ page.footer_third }}
+            </div>
             {{ page.footer_fourth }}
-          </div>
+            <div>
+              All Right reserved &copy; {{ 'now'|date('Y') }} 
+              | Design & developed by : <a href="https://yellow-website.com" target="_blank">Yellow-Website.com</a>
+            </div>
         {% endif %}
+
         {% if page.footer_fifth %}
-          <div class="site-footer__bottom">
             {{ page.footer_fifth }}
-            <div>All Right reserved &copy; {{ 'now'|date('Y') }} | Design & developed by : <a href="https://yellow-website.com" target="_blank">Yellow-Website.com</a></a></div></ul>
-          </div>
         {% endif %}
       </div>
     {% endblock %}
