@@ -2,18 +2,18 @@
     {% block footer %}
       <div class="{{ container }}">
         {% if page.footer_first or page.footer_second or page.footer_third or page.footer_fourth %}
-          <div class="site-footer__top clearfix">
+
             {{ page.footer_first }}
             {{ page.footer_second }}
-              <div class="site-footer__bottom text-center"></div>
+              <div class="site-footer__bottom text-center">
               {{ page.footer_third }}
               </div>
-             
-            <div class="text-center">
-               {{ page.footer_fourth }}
-              All Right reserved &copy; {{ 'now'|date('Y') }} 
-              | Design & developed by : <a href="https://yellow-website.com" target="_blank">Yellow-Website.com</a>
-            </div>
+              <div class="text-center">
+                {{ page.footer_fourth }}
+                All Right reserved &copy; {{ 'now'|date('Y') }} 
+                | Design & developed by : <a href="https://yellow-website.com" target="_blank">Yellow-Website.com</a>
+              </div>
+              
         {% endif %}
 
         {% if page.footer_fifth %}
