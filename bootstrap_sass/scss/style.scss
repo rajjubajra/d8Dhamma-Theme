@@ -297,12 +297,7 @@ li.nav-item{
                 width: 228px;
             }
         }
-
-
-        
-
     }
-
 }
 
 
@@ -324,6 +319,7 @@ li.nav-item{
 -------------------------------------------------*/
 .node--type-event-calendar{
     padding: 30px;
+
     header{
         display: none;
     }
@@ -331,7 +327,7 @@ li.nav-item{
         padding: 10px;
         background-color: bisque;
     }
-    }
+    
     .node__content{
         display: flex;
         flex-direction: column;
@@ -383,6 +379,7 @@ li.nav-item{
         }
     }
 }
+
 
 
 
