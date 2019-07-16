@@ -322,7 +322,51 @@ li.nav-item{
 
 /* EVENT-CALENDAR STYLES
 -------------------------------------------------*/
+.node--type-event-calendar{
+    .node__content{
+        display: flex;
+        flex-direction: column;
 
+        .field--name-field-event{
+            padding-bottom: 50px;
+        }
+
+        .field--name-field-event-date {
+            .field__label{
+
+            }
+            .field_item{
+
+            }
+        }
+        .field--name-field-event-date-to {
+            margin-bottom: 50px;
+            .field__label{
+
+            }
+            .field_item{
+                
+            }
+        }
+        .field--name-field-event-venue {
+            margin-bottom: 50px;
+        }
+        .field--name-field-event-hourely-schedule {
+            .field__label{
+                font-size: 22px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+            .field__item {
+                border: 3px solid #ccc;
+                padding: 40px 30px;
+                margin: 10px 0px;
+            }
+
+        }
+    }
+}
 
 
 
