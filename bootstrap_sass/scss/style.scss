@@ -323,6 +323,15 @@ li.nav-item{
 /* EVENT-CALENDAR STYLES
 -------------------------------------------------*/
 .node--type-event-calendar{
+    padding: 30px;
+    header{
+        display: none;
+    }
+    img{
+        padding: 10px;
+        background-color: bisque;
+    }
+    }
     .node__content{
         display: flex;
         flex-direction: column;
