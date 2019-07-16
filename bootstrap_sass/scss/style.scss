@@ -315,7 +315,30 @@ li.nav-item{
 }
 
 
-/* EVENT-CALENDAR STYLES
+/* EVENT-CALENDAR LISTING DISPLAY STYLES
+-------------------------------------------------*/
+.view-event-calendar {
+    .event-image{
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+    .event-text {
+        font-size: 0.8rem;
+        padding: 20px;
+    }
+    .event-time {
+        ul li{
+            list-style: none;
+        }
+    }
+
+}
+
+
+
+/* EVENT-CALENDAR FULL DISPLAY STYLES
 -------------------------------------------------*/
 .node--type-event-calendar{
     padding: 30px;
