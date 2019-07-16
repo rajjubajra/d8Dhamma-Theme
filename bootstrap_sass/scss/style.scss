@@ -320,11 +320,13 @@ li.nav-item{
 .node--type-event-calendar{
     padding: 30px;
 
-    
-    img{
-        padding: 10px;
-        background-color: bisque;
+    .field--name-field-event-image{
+            img{
+            padding: 10px;
+            background-color: bisque;
+        }
     }
+    
     
     .node__content{
         display: flex;
