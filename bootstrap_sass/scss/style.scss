@@ -315,6 +315,17 @@ li.nav-item{
 }
 
 
+/* FAQ PAGE  STYLES
+-------------------------------------------------*/
+.faq-page {
+    padding: 20px;
+    border: 1px solid #eee;
+    max-width: 900px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+
 /* EVENT-CALENDAR LISTING DISPLAY STYLES
 -------------------------------------------------*/
 .view-event-calendar {
@@ -325,12 +336,23 @@ li.nav-item{
         }
     }
     .event-text {
+        height: auto;
+        display: flex;
+        flex-direction: column;
         font-size: 0.8rem;
         padding: 20px;
+        width: 100%;
     }
     .event-time {
-        ul li{
-            list-style: none;
+        ul{
+            margin-left: -30px;
+            padding: 50px 30px;
+            li{
+                list-style: none;
+            }
+        } 
+        i{
+            padding: 0px 10px;
         }
     }
     .view-node {
