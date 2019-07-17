@@ -329,6 +329,12 @@ li.nav-item{
 /* EVENT-CALENDAR LISTING DISPLAY STYLES
 -------------------------------------------------*/
 .view-event-calendar {
+    .event-calendar {
+        padding: 20px;
+        background-color: #efefef;
+        margin: 15px;
+        border: 1px solid #ccc;
+    }
     .views-row{
         width: 100%;
     }
@@ -347,11 +353,13 @@ li.nav-item{
         width: 100%;
     }
     .event-time {
+        font-size: 0.9rem;
         ul{
             margin-left: -30px;
             padding: 50px 30px;
             li{
                 list-style: none;
+                display: flex;
             }
         } 
         i{
