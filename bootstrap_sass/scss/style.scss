@@ -329,6 +329,9 @@ li.nav-item{
 /* EVENT-CALENDAR LISTING DISPLAY STYLES
 -------------------------------------------------*/
 .view-event-calendar {
+    .views-row{
+        width: 100%;
+    }
     .event-image{
         img{
             width: 100%;
@@ -353,6 +356,8 @@ li.nav-item{
         } 
         i{
             padding: 0px 10px;
+            width: 40px;
+            text-align: center;
         }
     }
     .view-node {
