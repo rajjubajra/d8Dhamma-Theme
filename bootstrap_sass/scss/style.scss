@@ -334,6 +334,16 @@ li.nav-item{
         background-color: #efefef;
         margin: 15px;
         border: 1px solid #ccc;
+
+        .view-node a {
+            padding: 8px 25px;
+            background: black;
+            color: white;
+            &:hover{
+                text-decoration: none;
+                background-color: #333;
+            }
+        }
     }
     .views-row{
         width: 100%;
@@ -473,7 +483,11 @@ li.nav-item{
 
 /* CONTACT FORM- STYLES
 -------------------------------------------------*/
-
+.list-group{
+    li.list-group-item {
+        padding: 0px !important;
+    }
+}
 
 .block-views-blockcontact-address-block-block-1{
     display: flex;
