@@ -111,6 +111,13 @@ li.nav-item{
     border: 1px solid transparent;
     border-radius: 0.25rem;
 }
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+    background-color: white;
+    padding: 0px 20px;
+}
 
 
 /* FRONT-PAGE STYLES
