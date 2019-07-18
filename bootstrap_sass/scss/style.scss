@@ -119,11 +119,6 @@ li.nav-item{
         z-index: 10;
         background-color: #f5f5f5;
 
-        .hide{
-            display: none;
-        }
-
-
         .header{
             display: flex;
             padding: 0px 13px;
@@ -186,6 +181,15 @@ li.nav-item{
             }
         }
     }
+
+    .hide{
+        display: none;
+    }
+    .show{
+        display: flex;
+    }
+
+
 
 #landing-page{
     header{
@@ -670,11 +674,6 @@ footer{
                 margin: 0px 6px;
             }
         }
-        .hide{
-            display: none;
-        }
-        .show{
-            display: flex;
-        }
+       
     }
 }
