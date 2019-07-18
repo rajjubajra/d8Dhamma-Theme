@@ -656,6 +656,7 @@ footer{
     }
     
     .site-footer__bottom{
+
         display: flex;
         justify-content: center;
 
@@ -668,6 +669,12 @@ footer{
             i {
                 margin: 0px 6px;
             }
+        }
+        .hide{
+            display: none;
+        }
+        .show{
+            display: flex;
         }
     }
 }
