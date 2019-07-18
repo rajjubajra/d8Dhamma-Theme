@@ -39,6 +39,11 @@ p{
     z-index: -1;
     filter: grayscale(100%);
   }
+  @media (max-width: 992px){
+    #myVideo {
+        width: auto; 
+      }
+  }
 }
 
 
