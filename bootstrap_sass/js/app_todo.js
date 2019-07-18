@@ -4,7 +4,7 @@ const clear = document.querySelector(".clear");
 const dateElement = document.getElementById("date");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
-const todoNote = document.getElementById("todo-note");
+const todoNoteBtn = document.getElementById("todo-note-btn");
 
 // Classes names
 const CHECK = "fa-check-circle";
@@ -123,12 +123,6 @@ list.addEventListener("click", function(event){
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
 
-// show and hide Todo Note on the browser
-todoNote.addEventListener("click", showHideNote);
-showHideNote(){
-    console.log("show hide note click works");
-    todoNote.classList.toggle("show");
-}
 
 
 
