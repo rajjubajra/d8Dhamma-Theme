@@ -651,5 +651,11 @@ footer{
     .site-footer__bottom{
         display: flex;
         justify-content: center;
+        
+        div#todo-app-btn {
+            align-self: center;
+            position: absolute;
+            left: 15px;
+        }
     }
 }
