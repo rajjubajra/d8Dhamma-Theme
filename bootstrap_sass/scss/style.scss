@@ -711,8 +711,12 @@ a {
 
     
 .site-footer {
-    background: $gray-100 !important;
+    background: #101010 !important;
     padding: 0px;
+    color: #ccc;
+    a{
+        color: #ccc;
+    }
 }
 
 footer{
