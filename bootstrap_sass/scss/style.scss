@@ -18,6 +18,9 @@ h1, .h1 {
     font-size: 3.5rem;
     color: #777;
     letter-spacing: 4px;
+    span.greetings{
+        color: #fffdfd;
+    }
 }
 a{
     color: #565656 !important;
@@ -713,9 +716,9 @@ a {
 .site-footer {
     background: #101010 !important;
     padding: 0px;
-    color: #ccc;
+    color: #ccc !important;
     a{
-        color: #ccc;
+        color: #ccc !important;
     }
 }
 
@@ -728,7 +731,6 @@ footer{
         flex-direction: row !important;
         li.nav-item{
             margin: 0px 10px;
-            color: #000;
             font-size: 0.8rem;
             font-weight: 100;
             letter-spacing: 1px;
