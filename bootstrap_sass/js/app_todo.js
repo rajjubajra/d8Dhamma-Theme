@@ -69,7 +69,7 @@ function addToDo(toDo, id, done, trash){
 
 // add an item to the list user the enter key
 document.addEventListener("keyup",function(even){
-    if(event.keyCode === 13 || event.which === 13){
+    if(event.keyCode === 13){
         const toDo = input.value;
         
         // if the input isn't empty
