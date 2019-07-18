@@ -220,84 +220,6 @@ li.nav-item{
         }
     }
 
-
-
-    /* TODO LIST BLOCK INSIDE front-page class
-    -------------------*/
-    .todo-block{
-        width: 270px;
-        border: 1px solid #ccc;
-        overflow: scroll;
-        position: absolute;
-        bottom: 0px;
-        left: 0px;
-        z-index: 10;
-        background-color: #f5f5f5;
-        display: none;
-
-        .header{
-            display: flex;
-            padding: 0px 13px;
-            background-color: #ff7c07;
-
-            .fas, 
-            .far{
-                font-size: 1.2rem;
-                padding: 4px 0px;
-                cursor: pointer;
-            }
-            .date{
-                margin: 0px 10px;
-                width: 185px;
-                font-size: 1rem;
-                font-weight: bold;
-                text-align: center;
-            }
-            
-        }
-        
-        .content{
-            width: 100%;
-            height: 236px;
-            overflow: scroll;
-            padding: 10px 0px;
-            ul{
-                margin-left: -40px;
-                .far{
-                    cursor: pointer;
-                }
-                li.item{
-                    display: flex;
-                    list-style: none;
-                }
-                li span.text{
-                    width: 195px;
-                    display: block;
-                    margin: 0px 5px;
-                    font-size: 0.9rem;
-                    font-weight: 600;
-                    position: relative;
-                    top: -4px;
-                }
-                .lineThrough{
-                    text-decoration: line-through;    
-                }
-                .fa-check-circle, .lineThrough{
-                    color: green;
-                }
-            }
-        }
-
-        .add-to-do{
-            .fa{
-                font-size: 1.2rem;
-                padding-left: 4px;
-            }
-            input{
-                width: 228px;
-            }
-        }
-    }
 }
 
 
@@ -624,6 +546,89 @@ a {
 
 /* FOOTER 
 --------------------------------------------------*/
+
+
+    /* TODO LIST BLOCK INSIDE front-page class
+    -------------------*/
+    .todo-block{
+        width: 270px;
+        border: 1px solid #ccc;
+        overflow: scroll;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        z-index: 10;
+        background-color: #f5f5f5;
+
+        .hide{
+            display: none;
+        }
+
+
+        .header{
+            display: flex;
+            padding: 0px 13px;
+            background-color: #ff7c07;
+
+            .fas, 
+            .far{
+                font-size: 1.2rem;
+                padding: 4px 0px;
+                cursor: pointer;
+            }
+            .date{
+                margin: 0px 10px;
+                width: 185px;
+                font-size: 1rem;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        
+        .content{
+            width: 100%;
+            height: 236px;
+            overflow: scroll;
+            padding: 10px 0px;
+            ul{
+                margin-left: -40px;
+                .far{
+                    cursor: pointer;
+                }
+                li.item{
+                    display: flex;
+                    list-style: none;
+                }
+                li span.text{
+                    width: 195px;
+                    display: block;
+                    margin: 0px 5px;
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    position: relative;
+                    top: -4px;
+                }
+                .lineThrough{
+                    text-decoration: line-through;    
+                }
+                .fa-check-circle, .lineThrough{
+                    color: green;
+                }
+            }
+        }
+
+        .add-to-do{
+            .fa{
+                font-size: 1.2rem;
+                padding-left: 4px;
+            }
+            input{
+                width: 228px;
+            }
+        }
+    }
+
+    
 .site-footer {
     background: $gray-100 !important;
     padding: 0px;
@@ -651,11 +656,16 @@ footer{
     .site-footer__bottom{
         display: flex;
         justify-content: center;
-        
+
         div#todo-app-btn {
             align-self: center;
             position: absolute;
             left: 15px;
+            cursor: pointer;
+
+            i {
+                margin: 0px 6px;
+            }
         }
     }
 }
