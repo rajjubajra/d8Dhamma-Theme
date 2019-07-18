@@ -67,67 +67,6 @@ function addToDo(toDo, id, done, trash){
     list.insertAdjacentHTML(position, item);
 }
 
-// add an item to the list user the enter key
-document.addEventListener("keyup",function(even){
-    if(event.keyCode === 13){
-        const toDo = input.value;
-        
-        // if the input isn't empty
-        if(toDo){
-            addToDo(toDo, id, false, false);
-            
-            LIST.push({
-                name : toDo,
-                id : id,
-                done : false,
-                trash : false
-            });
-            
-            // add item to localstorage ( this code must be added where the LIST array is updated)
-            localStorage.setItem("TODO", JSON.stringify(LIST));
-            
-            id++;
-        }
-        input.value = "";
-    }
-});
-
-// complete to do
-function completeToDo(element){
-    element.classList.toggle(CHECK);
-    element.classList.toggle(UNCHECK);
-    element.parentNode.querySelector(".text").classList.toggle(LINE_THROUGH);
-    
-    LIST[element.id].done = LIST[element.id].done ? false : true;
-}
-
-// remove to do
-function removeToDo(element){
-    element.parentNode.parentNode.removeChild(element.parentNode);
-    
-    LIST[element.id].trash = true;
-}
-
-// run function for complete/delete the the task items created on click on icon
-list.addEventListener("click", function(event){
-    const element = event.target; // return the clicked element inside list
-    const elementJob = element.attributes.job.value; // complete or delete
-    
-    if(elementJob == "complete"){
-        completeToDo(element);
-    }else if(elementJob == "delete"){
-        removeToDo(element);
-    }
-    
-    // add item to localstorage ( this code must be added where the LIST array is updated)
-    localStorage.setItem("TODO", JSON.stringify(LIST));
-});
-
-
-
-
-
-
 
 
 
