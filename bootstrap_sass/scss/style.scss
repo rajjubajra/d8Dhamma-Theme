@@ -65,7 +65,8 @@ header{
 /* NAVBAR STYLES
 -------------------------------------------------*/
 @media (min-width: 992px){
-    .navbar-collapse{
+    .navbar-expand-lg .navbar-collapse
+    {
         justify-content: flex-end;
         background-color: transparent;
     }
