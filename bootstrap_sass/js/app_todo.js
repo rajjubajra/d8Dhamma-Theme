@@ -1,10 +1,10 @@
 // CODE EXPLAINED channel
-
 // Select the Elements
 const clear = document.querySelector(".clear");
 const dateElement = document.getElementById("date");
 const list = document.getElementById("list");
 const input = document.getElementById("input");
+const todoNote = document.getElementById("todo-note");
 
 // Classes names
 const CHECK = "fa-check-circle";
@@ -48,7 +48,6 @@ const today = new Date();
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 // add to do function
-
 function addToDo(toDo, id, done, trash){
     
     if(trash){ return; }
@@ -70,7 +69,7 @@ function addToDo(toDo, id, done, trash){
 
 // add an item to the list user the enter key
 document.addEventListener("keyup",function(even){
-    if(event.keyCode === 13 || even.keyCode === 36){
+    if(event.keyCode === 13 || event.which === 13){
         const toDo = input.value;
         
         // if the input isn't empty
@@ -93,7 +92,6 @@ document.addEventListener("keyup",function(even){
     }
 });
 
-
 // complete to do
 function completeToDo(element){
     element.classList.toggle(CHECK);
@@ -110,8 +108,7 @@ function removeToDo(element){
     LIST[element.id].trash = true;
 }
 
-// target the items created dynamically
-
+// run function for complete/delete the the task items created on click on icon
 list.addEventListener("click", function(event){
     const element = event.target; // return the clicked element inside list
     const elementJob = element.attributes.job.value; // complete or delete
@@ -126,7 +123,12 @@ list.addEventListener("click", function(event){
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
 
-
+// show and hide Todo Note on the browser
+todoNote.addEventListener("click", showHideNote);
+showHideNote(){
+    console.log("show hide note click works");
+    todoNote.classList.toggle("show");
+}
 
 
 
