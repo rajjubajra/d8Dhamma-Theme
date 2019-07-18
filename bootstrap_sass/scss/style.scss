@@ -515,6 +515,14 @@ li.nav-item{
         padding: 0px !important;
     }
 }
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border: 0px solid rgba(0, 0, 0, 0.125);
+}
 
 .block-views-blockcontact-address-block-block-1{
     display: flex;
