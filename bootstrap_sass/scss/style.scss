@@ -86,8 +86,11 @@ li.nav-item{
    a:hover{
        color: #333 !important;
    }
-
-
+}
+.dropdown-item.active, .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #eee;
 }
 
 
