@@ -28,6 +28,7 @@ p{
 }
 
 #page-wrapper{
+    min-height: 100vh;
     #myVideo {
     position: fixed;
     right: 0;
@@ -644,7 +645,6 @@ footer{
     text-align: center;
     font-size: 0.8rem;
     width: 100%;
-    min-height: 100vh;
     ul.navbar-nav{
         display: flex;
         flex-direction: row !important;
