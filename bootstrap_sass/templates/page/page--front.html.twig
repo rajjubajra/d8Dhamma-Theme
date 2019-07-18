@@ -142,6 +142,20 @@ function countDown(e){
 window.addEventListener('click', countDown);
 
 
+
+//toggle Todo-Note
+const todoNoteBtn = document.getElementById('todo-note-btn');
+console.log(todoNoteBtn);
+const todoNote = document.querySelector(".todo-block");
+
+todoNoteBtn.addEventListener('click', function(){
+  console.log('click works'); 
+  todoNote.classList.toggle("hide");
+});
+
+console.log(todoNote);
+
+
 /** footer style for front page only*/
 const footer = document.querySelector("footer");
 footer.style.position = 'absolute';

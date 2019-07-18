@@ -123,17 +123,7 @@ list.addEventListener("click", function(event){
     localStorage.setItem("TODO", JSON.stringify(LIST));
 });
 
-//toggle Todo-Note
-const todoNoteBtn = document.getElementById('todo-note-btn');
-console.log(todoNoteBtn);
-const todoNote = document.querySelector(".todo-block");
 
-todoNoteBtn.addEventListener('click', function(){
-  console.log('click works'); 
-  todoNote.classList.toggle("hide");
-});
-
-console.log(todoNote);
 
 
 
