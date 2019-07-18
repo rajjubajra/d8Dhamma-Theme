@@ -47,26 +47,6 @@ const today = new Date();
 
 dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
-// add to do function
-function addToDo(toDo, id, done, trash){
-    
-    if(trash){ return; }
-    
-    const DONE = done ? CHECK : UNCHECK;
-    const LINE = done ? LINE_THROUGH : "";
-    
-    const item = `<li class="item">
-                    <i class="far ${DONE}" job="complete" id="${id}"></i>
-                    <span class="text ${LINE}">${toDo}</span>
-                    <i class="far fa-trash-alt" job="delete" id="${id}"></i>
-                  </li>
-                `;
-    
-    const position = "beforeend";
-    
-    list.insertAdjacentHTML(position, item);
-}
-
 
 
 
