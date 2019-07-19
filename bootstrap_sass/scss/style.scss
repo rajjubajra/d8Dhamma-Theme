@@ -726,7 +726,11 @@ a {
     color: #ccc !important;
     a{
         color: #ccc !important;
+        &:hover{
+            color: #eee;
+        }
     }
+    
 }
 
 footer{
