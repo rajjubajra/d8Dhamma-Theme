@@ -383,8 +383,8 @@ li.nav-item{
 
         .view-node a {
             padding: 8px 25px;
-            background: black;
-            color: white;
+            background: #333;
+            color: #ccc !important;
             &:hover{
                 text-decoration: none;
                 background-color: #333;
