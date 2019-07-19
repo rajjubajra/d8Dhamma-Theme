@@ -1,5 +1,6 @@
 // CODE EXPLAINED channel
 
+
 /** 
 ******* TODO NOTE *************************/
 //todo note button at footer
@@ -137,6 +138,7 @@ function removeToDo(element){
 }
 
 // run function for complete/delete the the task items created on click on icon
+
 list.addEventListener("click", function(event){
   const element = event.target; // return the clicked element inside list
   const elementJob = element.attributes.job.value; // complete or delete
