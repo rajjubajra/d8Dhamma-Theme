@@ -57,7 +57,7 @@ function js () {
 // Static Server + watching scss/html files
 function serve () {
   browserSync.init({
-    proxy: 'http://localhost:8888/Drupal/d8lite-meditation-app/web/',
+    proxy: 'https://www.yellow-website.com/d8dhamma-website/',
   })
 
   gulp.watch([paths.scss.watch, paths.scss.bootstrap], styles).on('change', browserSync.reload)
