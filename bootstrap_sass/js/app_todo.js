@@ -1,6 +1,5 @@
 // CODE EXPLAINED channel
 
-
 /** 
 ******* TODO NOTE *************************/
 //todo note button at footer
@@ -159,15 +158,3 @@ console.log(todoNote);
 
 
 /** TODO NOTE APP CLOSED */
-
-
-
-
-
-
-
-
-
-
-
-
