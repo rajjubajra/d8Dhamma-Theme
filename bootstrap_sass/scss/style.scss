@@ -6,6 +6,16 @@ Description: Bootstrap 4 with Sass
 // import files
 @import "import";
 
+
+/*
+ANIMATION EFFECT
+-------------------------------------------------*/
+@keyframes fadeOut {
+    from { opacity: 0;}
+    to { opacity: 1;}
+  }
+
+
 /* GENERAL STYLES
 -------------------------------------------------*/
 
@@ -18,10 +28,12 @@ h1, .h1 {
     font-size: 3.5rem;
     color: #777;
     letter-spacing: 4px;
-    span.greetings{
-        color: #fffdfd;
-        font-size: 2.0rem !important;
-    }
+        span.greetings{
+            color: #fffdfd;
+            font-size: 2.0rem !important;
+            animation-name: fadeOut;
+            animation-duration: 3s;
+        }
 }
 a{
     color: #565656 !important;
@@ -255,23 +267,17 @@ li.nav-item{
     color: #f1f1f1;
     */
 
-    
-
-
     .items{
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-        
-        
+    
         h1{
             text-align: center;
             span{text-shadow: 1px 1px 1px #333;}
             }
-        
 
         ul.time{
             display: flex;
