@@ -11,7 +11,7 @@ global-styling:
    
   css:
     component:
-      css/style.css: {}
+      css/style.min.css: {}
   dependencies:
     - core/jquery
     - core/drupal
