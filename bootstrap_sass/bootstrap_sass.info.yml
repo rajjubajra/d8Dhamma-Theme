@@ -17,6 +17,7 @@ regions:
   primary_menu: 'Primary menu'
   secondary_menu: 'Secondary menu'
   page_top: 'Page top'
+  website_name: 'Website Name'
   page_bottom: 'Page bottom'
   highlighted: Highlighted
   featured_top: 'Featured top'
