@@ -151,11 +151,8 @@ li.nav-item{
 
 /* FRONT-PAGE STYLES
 -------------------------------------------------*/
-ul.time {
-    font-size: 0px;
-    li{
-      font-size: 0px;
-    }
+ul.time, ul#time {
+   display: none;
 }
 
 
